@@ -1,62 +1,44 @@
-# React + TypeScript + Vite
+# 🕒 Pomodoro Tomatime
 
-This template provides a minimal setup to get React working in Vite with HMR and
-some ESLint rules.
+Aplicação baseada na técnica Pomodoro, construída com React. Suporte a tema
+escuro/claro, histórico local de uso, timer com Web Worker.
 
-Currently, two official plugins are available:
+## 🔧 Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react)
-  uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc)
-  uses [SWC](https://swc.rs/) for Fast Refresh
+-   [React](https://reactjs.org/) com [Vite](https://vitejs.dev/)
+-   [Lucide Icons](https://lucide.dev/) para ícones leves e modernos
+-   [Toastify](https://fkhadra.github.io/react-toastify/) para notificações
+-   [Web Workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API)
+    para manter o timer mesmo com aba inativa
+-   Armazenamento local com `localStorage`
 
-## Expanding the ESLint configuration
+## ⚙️ Funcionalidades
 
-If you are developing a production application, we recommend updating the
-configuration to enable type-aware lint rules:
+-   ⏱ Cronômetro funcional com lógica Pomodoro;
+-   🌙 Alternância entre tema claro e escuro;
+-   📊 Histórico de sessões de foco e descanso;
+-   ⚙️ Tela de configurações com personalização de tempo;
+-   📖 Página explicando o método Pomodoro;
+-   🚫 Página de 404 para rotas inválidas;
+-   🧠 Utilização de Web Worker para execução em segundo plano;
+-   📦 Armazenamento dos dados com `localStorage`;
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
+## Padrões de coloração
+
+-   Tempo de foco - Amarelo
+-   Tempo de descanso curto - Verde
+-   Tempo de descanso longo - Azul
+
+## 📦 Instalação
+
+```bash
+git clone https://github.com/Gui-ODSC/Tomatime.git
+cd Tomatime
+
+npm install
+npm run dev
 ```
 
-You can also install
-[eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x)
-and
-[eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom)
-for React-specific lint rules:
+## 📄 Licença
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x';
-import reactDom from 'eslint-plugin-react-dom';
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-});
-```
+-   Este projeto está licenciado sob os termos da MIT License.
