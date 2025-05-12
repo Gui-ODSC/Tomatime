@@ -4,6 +4,7 @@ import { Cycles } from "../Cycles"
 import { Input } from "../Input"
 
 export function MainForm() {
+
     return (
         <form className='form' action="">
             <div className='formRow'>
@@ -17,7 +18,7 @@ export function MainForm() {
 
             <div className='formRow'>
                 <p>
-                    Lorem ipsum dolor sit amet.
+                    O próximo intervalo é de 25min
                 </p>
             </div>
 
