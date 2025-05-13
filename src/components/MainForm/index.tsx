@@ -2,11 +2,17 @@ import { PlayCircleIcon } from "lucide-react"
 import { Button } from "../Button"
 import { Cycles } from "../Cycles"
 import { Input } from "../Input"
+import React from "react";
 
 export function MainForm() {
+    function handleCreateNewTask(
+        event: React.FormEvent<HTMLFormElement>
+    ) {
+        event.preventDefault();
+    }
 
     return (
-        <form className='form' action="">
+        <form onSubmit={handleCreateNewTask} className='form' action="">
             <div className='formRow'>
                 <Input
                     id='meuImput'
