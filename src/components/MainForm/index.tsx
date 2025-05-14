@@ -2,13 +2,17 @@ import { PlayCircleIcon } from "lucide-react"
 import { Button } from "../Button"
 import { Cycles } from "../Cycles"
 import { Input } from "../Input"
-import React from "react";
+import React, { useRef } from "react";
 
 export function MainForm() {
+
+    const taskNameInput = useRef<HTMLInputElement>(null);
+
     function handleCreateNewTask(
         event: React.FormEvent<HTMLFormElement>
     ) {
         event.preventDefault();
+        console.log(taskNameInput.current?.value)
     }
 
     return (
@@ -19,6 +23,7 @@ export function MainForm() {
                     type='text'
                     labelText='Tarefa'
                     placeholder='Digite algo'
+                    ref={taskNameInput}
                 />
             </div>
 
